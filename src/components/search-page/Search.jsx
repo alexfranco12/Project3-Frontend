@@ -1,6 +1,6 @@
 import React from 'react';
 
-const handleSubmit = () => {
+const handleChange = () => {
 
 }
 
@@ -12,11 +12,11 @@ function Search(props) {
     return (
         <div>
             <form className="search-form" onSubmit={handleSubmit} >
-                <label htmlFor="header-search"></label>
+                <label htmlFor="main-search"></label>
                 <input 
-                    id="header-search"
+                    id="main-search"
                     onChange={handleChange}
-                    placeholder="Search for your favorite recipe"
+                    placeholder="Search The City!"
                     value=""
                     type="text"
                     required />
