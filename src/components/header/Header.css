@@ -1,0 +1,12 @@
+.Header {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    align-self: center;
+}
+
+.profile {
+    align-self: flex-end;
+}
