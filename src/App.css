@@ -1,24 +1,16 @@
 .app {
-  display: grid;
-  grid-template-columns: 40px auto 40px;
-  grid-template-rows: 80px 700px auto;
-
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-header {
-  grid-column: 1 / span 3;
-  grid-row: 1 / span 1;
-
-
+  text-align: center;
 }
 
 .app-main {
-  grid-column: 1 / span 3;
-  grid-row: 2 / span 1;
+  
 }
 
 .app-footer {
-  grid-column: 1 / span 3;
-  grid-row: 3 / span 1;
+
 }

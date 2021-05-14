@@ -1,0 +1,17 @@
+.search-page {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+
+    background-color: azure;
+
+    min-height: 700px;
+}
+
+.main-search, .search-button {
+    padding: 10px;
+}
+
+.main-search {
+    width: 400px;
+}
