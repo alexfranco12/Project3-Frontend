@@ -24,6 +24,15 @@
     line-height: .2em;
 }
 
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-title {
+    color: rgb(102, 102, 196)
+}
+
 .error-box {
     background-color: gainsboro;
     text-align: center;

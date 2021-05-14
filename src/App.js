@@ -1,4 +1,4 @@
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import './App.css';
 import Header from './components/header/Header'
 import Search from './components/search-page/Search'
@@ -20,7 +20,7 @@ function App() {
       <main className="app-main">
         <Route exact path="/" component={Search} />
         <Route exact path="/places" component={Places} />
-        <Route exact path="/detail/:id" render={routerProps => (
+        <Route exact path="/details/:id" render={routerProps => (
           <PlaceDetails match={routerProps.match} />
         )}/>
       </main>
