@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
+import './Places.css'
 
 function Places() {
     const [places, setPlaces] = useState([]);
@@ -20,18 +22,20 @@ function Places() {
     }, []);
 
     return (
-        <div>
-
+        <div className="Places">
             <div className="places-container">
+                <Link to="/" className="back-link"><button className="back-button">BACK</button></Link>
                 {places.map(place => (
-                    <div className="card">
-                        <div className="card-title">
-                            <h3>{place.name}</h3>
-                        </div>
-                    </div> 
+                    <div className="place-card">
+                        <h3 className="card-title">{place.name}</h3>
+                        <p className="card-address">{place.formatted_address}</p>
+                        <p>Rating: {place.rating}/5</p>
+                    </div>
                 ))}
             </div>
-
+            <div className="map-container">
+                MAP.
+            </div>
         </div>
     );
 }

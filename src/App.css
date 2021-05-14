@@ -3,14 +3,6 @@
   flex-direction: column;
 }
 
-.app-header {
+.app-header, .app-footer {
   text-align: center;
-}
-
-.app-main {
-  
-}
-
-.app-footer {
-
 }
