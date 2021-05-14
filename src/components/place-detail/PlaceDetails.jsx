@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 
 function PlaceDetails( {match} ) {
     console.log(match)
@@ -22,6 +23,7 @@ function PlaceDetails( {match} ) {
 
     return (
         <div>
+            <Link to="/places" className="back-link"><button className="back-button">BACK</button></Link>
             <h1>{place.name}</h1>
             <p>{place.formatted_address}</p>
             <p></p>
