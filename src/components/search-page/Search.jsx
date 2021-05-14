@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Search.css'
 
-const handleChange = () => {
-
-}
-
-const handleSubmit = () => {
-
-}
-
 function Search() {
+    const [userInput, setUserInput] = useState("");
+    const [search, setSearch] = useState("");
+
+    const handleChange = (e) => {
+        setUserInput(e.target.value);
+    }
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setSearch(userInput);
+        setUserInput("")
+    }
+
     return (
         <div className="search-page">
             <form className="search-form" onSubmit={handleSubmit} >
@@ -18,7 +24,7 @@ function Search() {
                     className="main-search"
                     onChange={handleChange}
                     placeholder="Search The City!"
-                    value=""
+                    value={userInput}
                     type="text"
                     required />
                 <input type="submit" className="search-button" value="Search"/>
