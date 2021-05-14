@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(79, 79, 79);
+    color: white;
+
+    height: 50px;
+}
