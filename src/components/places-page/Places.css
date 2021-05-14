@@ -1,0 +1,29 @@
+.Places {
+    display: flex;
+}
+
+.back-link {
+    align-self: flex-end;
+}
+
+.back-button {
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.places-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+}
+
+.place-card {
+    border: solid 1px;
+    max-width: 600px;
+    line-height: .2em;
+}
+
+.map-container {
+    margin: 200px 200px 0 200px;
+}
