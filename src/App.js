@@ -1,6 +1,6 @@
 import { Route, Link } from 'react-router-dom'
 import './App.css';
-import Header from './components/Header'
+import Header from './components/header/Header'
 import Search from './components/search-page/Search'
 import Footer from './components/footer/Footer'
 import Places from './components/places-page/Places';

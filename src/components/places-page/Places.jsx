@@ -34,6 +34,9 @@ function Places() {
                         </div>
                     </Link>
                 ))}
+                <div className="error-box">
+                    <p>Don't see the place you're looking for? <span>Add a new place to our travel site.</span></p>
+                </div>
             </div>
             <div className="map-container">
                 MAP.

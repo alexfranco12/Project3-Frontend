@@ -24,6 +24,12 @@
     line-height: .2em;
 }
 
+.error-box {
+    background-color: gainsboro;
+    text-align: center;
+    padding: 20px 0;
+}
+
 .map-container {
     margin: 200px 200px 0 200px;
 }
