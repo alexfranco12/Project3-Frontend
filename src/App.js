@@ -1,8 +1,10 @@
 import { Route, Link } from 'react-router-dom'
+import './App.css';
 import Header from './components/Header'
 import Search from './components/search-page/Search'
 import Footer from './components/footer/Footer'
-import './App.css';
+import Places from './components/places-page/Places';
+import PlaceDetails from './components/place-detail/PlaceDetails';
 
 function App() {
   return (
@@ -17,7 +19,8 @@ function App() {
 
       <main className="app-main">
         <Route exact path="/" component={Search} />
-
+        <Route exact path="/places" component={Places} />
+        <Route exact path="/place-detail" component={PlaceDetails} />
       </main>
 
       <footer className="app-footer">
