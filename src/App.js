@@ -20,7 +20,9 @@ function App() {
       <main className="app-main">
         <Route exact path="/" component={Search} />
         <Route exact path="/places" component={Places} />
-        <Route exact path="/place-detail" component={PlaceDetails} />
+        <Route exact path="/detail/:id" render={routerProps => (
+          <PlaceDetails match={routerProps.match} />
+        )}/>
       </main>
 
       <footer className="app-footer">

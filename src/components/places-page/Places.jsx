@@ -26,11 +26,13 @@ function Places() {
             <div className="places-container">
                 <Link to="/" className="back-link"><button className="back-button">BACK</button></Link>
                 {places.map(place => (
-                    <div className="place-card">
-                        <h3 className="card-title">{place.name}</h3>
-                        <p className="card-address">{place.formatted_address}</p>
-                        <p>Rating: {place.rating}/5</p>
-                    </div>
+                    <Link to={`/details/${place._id}`} key={place._id} className="link">
+                        <div className="place-card">
+                            <h3 className="card-title">{place.name}</h3>
+                            <p className="card-address">{place.formatted_address}</p>
+                            <p>Rating: {place.rating}/5</p>
+                        </div>
+                    </Link>
                 ))}
             </div>
             <div className="map-container">
