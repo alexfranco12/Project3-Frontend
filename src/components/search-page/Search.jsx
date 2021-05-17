@@ -1,36 +1,48 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 import './Search.css'
 
 function Search() {
-    const [userInput, setUserInput] = useState("");
-    const [search, setSearch] = useState("");
-
-    const handleChange = (e) => {
-        setUserInput(e.target.value);
+    const [results, setResults] = useState([]);
+    const [searchString, setSearchString] = useState("restaurants");
+  
+    function getResults() {
+      const url = `http://localhost:4000/api/places`;
+  
+      axios.get(url).then((response) => {
+        setResults(response.data);
+      });
+      console.log(results);
     }
-    
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setSearch(userInput);
-        setUserInput("")
+  
+    function handleChange(event) {
+      console.log(event.target.value);
+      setSearchString(event.target.value);
     }
-
+  
+    function handleSubmit(event) {
+      event.preventDefault();
+      getResults(searchString);
+    }
+  
     return (
-        <div className="search-page">
-            <form className="search-form" onSubmit={handleSubmit} >
-                <label htmlFor="main-search"></label>
-                <input 
-                    className="main-search"
-                    onChange={handleChange}
-                    placeholder="Search The City!"
-                    value={userInput}
-                    type="text"
-                    required />
-                <input type="submit" className="search-button" value="Search"/>
-            </form> 
-        </div>
+      <div className="search-page">
+        <section className="search-form">
+          Search:
+          <input
+            className="main-search"
+            placeholder="search"
+            type="text"
+            name="placename"
+            onChange={handleChange}
+            value={searchString}
+        />
+        <Link to={`/places/${searchString}`} className="search-button">Search</Link>
+        </section>
+        
+      </div>
     );
-}
+  }
 
 export default Search;
