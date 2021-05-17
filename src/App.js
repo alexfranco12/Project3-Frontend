@@ -19,8 +19,11 @@ function App() {
 
       <main className="app-main">
         <Route exact path="/" component={Search} />
-        <Route exact path="/places" component={Places} />
-        <Route exact path="/details/:id" render={routerProps => (
+        {/* <Route exact path="/places" component={Places} /> */}
+        <Route exact path="/places/:searchString" render={routerProps => (
+          <Places match={routerProps.match} />
+        )}/>
+        <Route exact path="/places/details/:id" render={routerProps => (
           <PlaceDetails match={routerProps.match} />
         )}/>
       </main>
