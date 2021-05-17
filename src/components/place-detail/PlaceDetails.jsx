@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 
 function PlaceDetails( {match} ) {
-    console.log(match)
     const [place, setPlace] = useState([]);
 
     function fetchPlace( ) {
@@ -11,7 +10,6 @@ function PlaceDetails( {match} ) {
         fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
             setPlace(data);
         })
         .catch(console.error);
