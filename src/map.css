@@ -1,0 +1,57 @@
+.map-h2 {
+  display: flex;
+  align-content: right;
+}
+
+.listing {
+  margin-right: 280px;
+  padding-top: -90px;
+}
+
+.google-map {
+  /* display: flex; */
+  height: 60vh;
+  width: 70%;
+  margin-left: 280px;
+}
+
+.pin {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  color: var(--main-blue);
+}
+
+.pin-icon {
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+}
+
+.pin-text {
+  font-size: 1.3em;
+}
+
+@media screen {
+  .google-map {
+    height: 50vh;
+    margin-bottom: 50px;
+
+    /* width: 100%; */
+    /* float: right; */
+  }
+
+  .map-h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .pin {
+    width: 15vw;
+  }
+
+  .pin-icon {
+    font-size: 10vw;
+  }
+}
