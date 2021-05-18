@@ -4,6 +4,8 @@ import SearchResults from "./components/SearchResults";
 import SearchDetails from "./components/SearchDetails";
 import { Route, Link } from "react-router-dom";
 import axios from "axios";
+import Header from "./components/Header";
+import "./App.css";
 // require("dotenv").config();
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       <Route exact path="/" component={SearchForm} />
       <Route exact path="/places/:spot" component={SearchResults} />
       <Route exact path="/:details" component={SearchDetails} />
