@@ -4,10 +4,13 @@ import axios from "axios";
 
 function SearchForm() {
   const [results, setResults] = useState([]);
-  const [searchString, setSearchString] = useState("restaurants");
+  const [searchString, setSearchString] = useState("");
+  const [blankString, setBlankString] = useState("");
 
   function getResults() {
     const url = `http://localhost:4000/api/places`;
+
+    setBlankString("search");
 
     axios.get(url).then((response) => {
       setResults(response.data);
@@ -27,8 +30,7 @@ function SearchForm() {
 
   return (
     <div>
-      <section>
-        Search:
+      <section className="searchBar">
         <input
           placeholder="search"
           type="text"
@@ -36,8 +38,32 @@ function SearchForm() {
           onChange={handleChange}
           value={searchString}
         />
+        <Link to={`/places/${searchString}`}>
+          <button>Search</button>
+        </Link>
       </section>
-      <Link to={`/places/${searchString}`}>Search</Link>
+      <div className="container">
+        <div>
+          <Link style={{ textDecoration: "none" }} to={`/places/cafes`}>
+            Cafe
+          </Link>
+        </div>
+        <div>
+          <Link style={{ textDecoration: "none" }} to={`/places/restaurants`}>
+            Restaurants
+          </Link>
+        </div>
+        <div>
+          <Link style={{ textDecoration: "none" }} to={`/places/bars`}>
+            Bars
+          </Link>
+        </div>
+        <div>
+          <Link style={{ textDecoration: "none" }} to={`/places/store`}>
+            Store
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

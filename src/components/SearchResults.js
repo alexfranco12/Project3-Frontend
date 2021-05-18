@@ -6,8 +6,6 @@ import "../map.css";
 import { Icon } from "@iconify/react";
 import locationIcon from "@iconify/icons-mdi/map-marker";
 
-import location from "../images/location.png";
-
 function SearchResults(props) {
   let spot = props.match.params.spot;
 
@@ -27,10 +25,13 @@ function SearchResults(props) {
   }, []);
 
   return (
-    <div className="gallery">
+    <div className="containerResults">
       {results.map((result) => (
-        <div key={result.id} className="gif">
-          <Link to={`/${result.name}`}> {result.name}</Link>
+        <div key={result.id} className="containerResults">
+          <Link style={{ textDecoration: "none" }} to={`/${result.name}`}>
+            {" "}
+            {result.name}
+          </Link>
         </div>
       ))}
     </div>
