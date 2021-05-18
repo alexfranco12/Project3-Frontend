@@ -27,11 +27,13 @@ function SearchResults(props) {
   return (
     <div className="containerResults">
       {results.map((result) => (
-        <div key={result.id} className="containerResults">
+        <div className="resultList" key={result.id}>
           <Link style={{ textDecoration: "none" }} to={`/${result.name}`}>
             {" "}
             {result.name}
           </Link>
+          {/* <span style={{ marginLeft: "35rem" }}>Rating: {result.rating}</span> */}
+          <span>Rating: {result.rating}</span>
         </div>
       ))}
     </div>

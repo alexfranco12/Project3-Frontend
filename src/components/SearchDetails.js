@@ -36,7 +36,12 @@ function SearchDetails(props) {
 
           <div className="listing">
             <img
-              src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=500&photoreference=${locDetails.photos[0].photo_reference}&key=${process.env.REACT_APP_GOOGLE_MAP_KEY}`}
+              src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=500&photoreference=${
+                locDetails.photos[0] === undefined
+                  ? ""
+                  : locDetails.photos[0].photo_reference
+              }&key=${process.env.REACT_APP_GOOGLE_MAP_KEY}`}
+              alt="google pic"
             />
           </div>
           <div className="google-map">

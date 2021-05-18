@@ -1,11 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
 import axios from "axios";
+import Select from "react-select";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function SearchForm() {
   const [results, setResults] = useState([]);
   const [searchString, setSearchString] = useState("");
   const [blankString, setBlankString] = useState("");
+
+  // Cities selection group
+  const Cities = [
+    { label: "Los Angeles" },
+    { label: "New York" },
+    { label: "San Diego" },
+    { label: "Miami" },
+    { label: "Boston" },
+    { label: "Chicago" },
+    { label: "San Fransisco" },
+  ];
+
+  const styleSelect = {
+    container: (base) => ({
+      ...base,
+      flex: 1,
+
+      width: "150px",
+    }),
+  };
 
   function getResults() {
     const url = `http://localhost:4000/api/places`;
@@ -38,10 +60,20 @@ function SearchForm() {
           onChange={handleChange}
           value={searchString}
         />
+
+        <div>
+          <Select
+            styles={styleSelect}
+            className="form-control"
+            options={Cities}
+          />
+        </div>
+
         <Link to={`/places/${searchString}`}>
           <button>Search</button>
         </Link>
       </section>
+
       <div className="container">
         <div>
           <Link style={{ textDecoration: "none" }} to={`/places/cafes`}>
@@ -59,7 +91,7 @@ function SearchForm() {
           </Link>
         </div>
         <div>
-          <Link style={{ textDecoration: "none" }} to={`/places/store`}>
+          <Link style={{ textDecoration: "none" }} to={`/places/stores`}>
             Store
           </Link>
         </div>
