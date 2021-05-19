@@ -1,3 +1,13 @@
+.mainpage{
+  
+  background-image:url("./images/2020-trends-to-watch-in-US-beverage_wrbm_large.jpg");
+  background-size:45.7%;
+  background-repeat:repeat-x;
+  background-position:top;
+  background-color:aliceblue;
+
+
+}
 .main-header {
   display: flex;
   align-items: center;

@@ -14,7 +14,7 @@ const LocationPin = ({ text }) => (
 
 const Map = ({ address, location, zoomLevel }) => (
   <div className="map">
-    <h2 className="map-h2">Come Visit Us</h2>
+    
 
     <div className="google-map">
       <GoogleMapReact

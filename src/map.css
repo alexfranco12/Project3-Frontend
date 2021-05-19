@@ -6,13 +6,19 @@
 .listing {
   margin-right: 280px;
   padding-top: -90px;
+  
+  
 }
 
 .google-map {
-  /* display: flex; */
-  height: 60vh;
+  display: flex;
+  /* height: 60vh; */
+  height: 100%;
   width: 70%;
   margin-left: 280px;
+ position: absolute;
+ top: 28%;
+ 
 }
 
 .pin {
@@ -35,11 +41,14 @@
 
 @media screen {
   .google-map {
+    
     height: 50vh;
     margin-bottom: 50px;
-
-    /* width: 100%; */
-    /* float: right; */
+    
+    width: 70%;
+    height: 50%;
+   
+    
   }
 
   .map-h2 {
@@ -54,4 +63,8 @@
   .pin-icon {
     font-size: 10vw;
   }
+  #name{
+    text-align: center;
+  }
+  
 }
