@@ -4,6 +4,7 @@ import axios from "axios";
 import Select from "react-select";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 function SearchForm() {
   const [results, setResults] = useState([]);
   const [searchString, setSearchString] = useState("");
@@ -51,7 +52,11 @@ function SearchForm() {
   }
 
   return (
-    <div>
+
+  
+    
+    <div className="mainpage">
+       
       <section className="searchBar">
         <input
           placeholder="search"
@@ -93,6 +98,7 @@ function SearchForm() {
         </div>
       </div>
     </div>
+    
   );
 }
 
