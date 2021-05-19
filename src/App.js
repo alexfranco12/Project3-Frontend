@@ -10,8 +10,6 @@ import Footer from "./components/Footer";
 import "./App.css";
 // require("dotenv").config();
 
-console.log(process.env.NODE_ENV)
-
 function App() {
   return (
     <div>

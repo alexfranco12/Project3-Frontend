@@ -10,6 +10,11 @@ function SearchForm() {
   const [searchString, setSearchString] = useState("");
   const [blankString, setBlankString] = useState("");
 
+  const host =
+  process.env.NODE_ENV === "production"
+    ? "blooming-eyrie-52127.herokuapp.com"
+    : "localhost:4000";
+
   // Cities selection group
   const Cities = [
     { label: "Los Angeles" },
@@ -31,7 +36,7 @@ function SearchForm() {
   };
 
   function getResults() {
-    const url = `http://localhost:4000/api/places`;
+    const url = `http://${host}/api/places`;
 
     setBlankString("search");
 
