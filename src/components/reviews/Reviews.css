@@ -1,0 +1,21 @@
+.reviews {
+    max-width: 800px;
+}
+
+.review-form {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.review-textbox {
+    width: auto;
+}
+
+.review-card {
+    border: solid 1px;
+    padding: 10px;
+}
+
+.review-name {
+    font-weight: bolder;
+}
