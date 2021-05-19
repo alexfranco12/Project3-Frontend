@@ -25,17 +25,22 @@ function SearchResults(props) {
   }, []);
 
   return (
-    <div className="containerResults">
-      {results.map((result) => (
-        <div className="resultList" key={result.id}>
-          <Link style={{ textDecoration: "none" }} to={`/${result.name}`}>
-            {" "}
-            {result.name}
-          </Link>
-          {/* <span style={{ marginLeft: "35rem" }}>Rating: {result.rating}</span> */}
-          <span>Rating: {result.rating}</span>
-        </div>
-      ))}
+    <div>
+      <Link to={`/`}>
+        <button className="backButton back">Back</button>
+      </Link>
+      <div className="containerResults">
+        {results.map((result) => (
+          <div className="resultList" key={result.id}>
+            <Link style={{ textDecoration: "none" }} to={`/${result.name}`}>
+              {" "}
+              {result.name}
+            </Link>
+            {/* <span style={{ marginLeft: "35rem" }}>Rating: {result.rating}</span> */}
+            <span>Rating: {result.rating}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

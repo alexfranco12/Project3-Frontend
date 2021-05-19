@@ -5,6 +5,13 @@ function Header(props) {
   return (
     <header className="main-header">
       <h1 style={{ fontFamily: "Impact" }}>Travel App</h1>
+
+      <nav>
+        {/* <Nav /> */}
+        <Link className="navBarLink" to="/">
+          Home
+        </Link>
+      </nav>
     </header>
   );
 }
