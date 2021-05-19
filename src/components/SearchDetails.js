@@ -13,9 +13,14 @@ function SearchDetails(props) {
   let history = useHistory();
 
   const [locDetails, setLocDetails] = useState([]);
+
+  const host =
+  process.env.NODE_ENV === "production"
+    ? "blooming-eyrie-52127.herokuapp.com"
+    : "localhost:4000";
   
   function getDetails() {
-    const url = `http://localhost:4000/api/places/${details}`;
+    const url = `http://${host}/api/places/${details}`;
 
     axios.get(url).then((response) => {
       setLocDetails(response.data);

@@ -7,8 +7,13 @@ function ReviewForm( {place} ) {
     const [review, setReview] = useState("");
     const [locReviews, setLocReviews] = useState([]);
 
+    const host =
+    process.env.NODE_ENV === "production"
+      ? "blooming-eyrie-52127.herokuapp.com"
+      : "localhost:4000";
+
     function addReview(reviewID) {
-        axios.put(`http://localhost:4000/api/places/${place}`, {
+        axios.put(`http://${host}/api/places/${place}`, {
             $push:{reviews: reviewID}
         }).then((response) => {
             console.log(response.data)
@@ -17,7 +22,7 @@ function ReviewForm( {place} ) {
 
     function getDetails() {
         setReview("");
-        axios.get(`http://localhost:4000/api/places/${place}`).then((response) => {
+        axios.get(`http://${host}/api/places/${place}`).then((response) => {
             setLocReviews(response.data[0].reviews)
         });
       }
@@ -28,7 +33,7 @@ function ReviewForm( {place} ) {
     
     function handleSubmit(e) {
         e.preventDefault();
-        axios.post(`http://localhost:4000/api/reviews`, {
+        axios.post(`http://${host}/api/reviews`, {
             name,
             review
         }).then((response) => {
