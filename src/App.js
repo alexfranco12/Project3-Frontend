@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import SearchForm from "./components/SearchForm";
+import SearchResults from "./components/SearchResults";
+import SearchDetails from "./components/SearchDetails";
+import Reviews from "./components/reviews/Reviews"
+import { Route, Link } from "react-router-dom";
+import axios from "axios";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import "./App.css";
+// require("dotenv").config();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Route exact path="/" component={SearchForm} />
+      <Route exact path="/places/:spot" component={SearchResults} />
+      <Route exact path="/:details" component={SearchDetails} />
+      <Route exact path="/places/reviews" component={Reviews} />
+
+      <Footer />
+
+      
+      {/* <SearchResults results={results} /> */}
     </div>
   );
 }

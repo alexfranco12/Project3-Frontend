@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
-}
+.mainpage{
+  
+  background-image:url("./images/2020-trends-to-watch-in-US-beverage_wrbm_large.jpg");
+  background-size:45.7%;
+  background-repeat:repeat-x;
+  background-position:top;
+  background-color:aliceblue;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: darkviolet;
+  padding: 20px;
+}
+
+.main-footer {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: black;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.searchBar {
+  display: flex;
+  align-items: center;
+  height: 550px;
+  width: 80%;
+  padding-bottom: 10px;
+  /* margin-bottom: 1000px; */
+  margin-left: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.selectBar {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+
+  height: 550px;
+  width: 28%;
+  padding-bottom: 10px;
+  /* margin-bottom: 1000px; */
+  /* margin-left: 150px; */
+  margin-right: -55px;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  height: 64px;
+  margin-left: 350px;
+  text-align: center;
+  margin-bottom: 150px;
+  margin-top: -220px;
+  width: 64px;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 150px;
+  margin-top: -220px;
+  margin-left: 200px;
+  flex-wrap: wrap;
+  height: 70px;
+}
+
+/* .container > div {
+  display: flex;
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  
+} */
+
+.itemCafe {
+  display: flex;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 17px;
+  font-weight: bolder;
+  width: 10%;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url("./images/coffee.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100%;
+  border: 3px solid blue;
+}
+
+.itemRest {
+  display: flex;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 17px;
+  font-weight: bolder;
+  width: 10%;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url("./images/restaurant.jpeg");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100%;
+  border: 3px solid blue;
+}
+
+.itemBar {
+  display: flex;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 17px;
+  font-weight: bolder;
+  width: 10%;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url("./images/bar.jpeg");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100%;
+  border: 3px solid blue;
+}
+
+.itemStore {
+  display: flex;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 17px;
+  font-weight: bolder;
+  width: 10%;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url("./images/store.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100%;
+  border: 3px solid blue;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.itemCafe:hover {
+  background: lightgray;
+  color: white;
+}
+
+.itemRest:hover {
+  background: lightgray;
+  color: white;
+}
+
+.itemBar:hover {
+  background: lightgray;
+  color: white;
+}
+
+.itemStore:hover {
+  background: lightgray;
+  color: white;
+}
+
+.containerResults > div {
+  display: flex;
+  background-color: #f1f1f1;
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.itemResults {
+  order: 20;
+}
+
+@media (max-width: 800px) {
+  .containerResults {
+    flex-direction: row;
   }
+}
+
+.containerRatings > div {
+  display: flex;
+  background-color: #f1f1f1;
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .containerRatings {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.selectOptions {
+  color: blue;
+}
+
+.resultList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: lightblue;
+  font-weight: bolder;
+  height: 40px;
+}
+
+.button:hover {
+  background: darkblue;
+  color: white;
+}
+
+.navBarLink {
+  margin: 10px;
+  font-weight: bolder;
+  color: black;
+}
+
+.backButton {
+  border: 2px solid black;
+  background-color: lightcyan;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Blue */
+.back {
+  border-color: #2196f3;
+  color: dodgerblue;
+}
+
+.back:hover {
+  background: #2196f3;
+  color: white;
 }
