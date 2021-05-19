@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
 import Map from "./Map";
 import "../map.css";
-
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function SearchDetails(props) {
   let details = props.match.params.details;
   console.log(details);
+
+  // initialize browser history for Back button
+  let history = useHistory();
 
   const [locDetails, setLocDetails] = useState([]);
   function getDetails() {
@@ -26,6 +29,10 @@ function SearchDetails(props) {
 
   return (
     <div>
+      <button className="backButton back" onClick={() => history.goBack()}>
+        Back
+      </button>
+
       {locDetails.map((locDetails) => (
         <div key={locDetails.id}>
           <p>

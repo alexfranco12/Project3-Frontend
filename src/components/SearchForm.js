@@ -62,35 +62,31 @@ function SearchForm() {
         />
 
         <div>
-          <Select
-            styles={styleSelect}
-            className="form-control"
-            options={Cities}
-          />
+          <Select styles={styleSelect} options={Cities} />
         </div>
 
         <Link to={`/places/${searchString}`}>
-          <button>Search</button>
+          <button className="button">Search</button>
         </Link>
       </section>
 
       <div className="container">
-        <div>
+        <div className="container itemCafe">
           <Link style={{ textDecoration: "none" }} to={`/places/cafes`}>
             Cafe
           </Link>
         </div>
-        <div>
+        <div className="container itemRest">
           <Link style={{ textDecoration: "none" }} to={`/places/restaurants`}>
-            Restaurants
+            Restaurant
           </Link>
         </div>
-        <div>
+        <div className="container itemBar">
           <Link style={{ textDecoration: "none" }} to={`/places/bars`}>
             Bars
           </Link>
         </div>
-        <div>
+        <div className="container itemStore">
           <Link style={{ textDecoration: "none" }} to={`/places/stores`}>
             Store
           </Link>
