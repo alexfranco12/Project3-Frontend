@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
+import Reviews from './reviews/Reviews'
 import Map from "./Map";
 import "../map.css";
 
@@ -7,17 +8,15 @@ import axios from "axios";
 
 function SearchDetails(props) {
   let details = props.match.params.details;
-  console.log(details);
 
   const [locDetails, setLocDetails] = useState([]);
+  
   function getDetails() {
     const url = `http://localhost:4000/api/places/${details}`;
 
     axios.get(url).then((response) => {
       setLocDetails(response.data);
     });
-    console.log(locDetails);
-    console.log(url);
   }
 
   useEffect(() => {
@@ -48,6 +47,9 @@ function SearchDetails(props) {
           </div>
         </div>
       ))}
+      <div className="review-section">
+        <Reviews place={details} />
+      </div>
     </div>
   );
 }

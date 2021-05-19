@@ -11,6 +11,7 @@ function SearchResults(props) {
 
   console.log(spot);
   const [results, setResults] = useState([]);
+  
   function getResults() {
     const url = `http://localhost:4000/api/places/${spot}`;
 
