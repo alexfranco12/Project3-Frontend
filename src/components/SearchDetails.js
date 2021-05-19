@@ -38,6 +38,8 @@ function SearchDetails(props) {
             {" "}
             <img src={locDetails.icon} />
           </p>
+          <p id="name">  {locDetails.name}</p>
+          <h3 id="name">Come visit us </h3>
           <p>Address: {locDetails.formatted_address}</p>
 
           <div className="listing">
@@ -50,7 +52,9 @@ function SearchDetails(props) {
               alt="google pic"
             />
           </div>
+          
           <div className="google-map">
+          
             <Map
               address={locDetails.formatted_address}
               location={locDetails.geometry.location}
