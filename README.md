@@ -36,3 +36,7 @@ Purlieu is a local search and discovery app that provides recommendations of pla
 * As a user, I want recommended locations displayed.
 * As a user, I want to have a secure log-in.
 
+### Wireframes
+
+
+
