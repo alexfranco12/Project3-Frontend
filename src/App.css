@@ -1,19 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
 .mainpage{
   
-  background-image:url("./images/2020-trends-to-watch-in-US-beverage_wrbm_large.jpg");
-  background-size:45.7%;
+  background-image:url("./images/MG_4_1_Los_Angeles\ \(1\).jpg");
+  background-size:cover;
   background-repeat:repeat-x;
   background-position:top;
-  background-color:aliceblue;
+  background-color:whitesmoke;
+  position:relative;
+  width: 100%;
+  height:1000px;
+  
+  
+  
+  
 
 
 }
+@media only screen and (min-width: 300px){
+ .mainpage{
+   flex-direction: column;
+ }
+}
+
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: darkviolet;
+  background-color:lightyellow;
   padding: 20px;
+  font-family: 'Rye', cursive;
 }
 
 .main-footer {
@@ -23,13 +41,14 @@
   background-color: black;
   padding: 20px;
   color: white;
+  
 }
 
 .searchBar {
   display: flex;
   align-items: center;
   height: 550px;
-  width: 80%;
+  width: 60%;
   padding-bottom: 10px;
   /* margin-bottom: 1000px; */
   margin-left: 80px;
@@ -68,8 +87,9 @@
   margin-bottom: 150px;
   margin-top: -220px;
   margin-left: 200px;
-  flex-wrap: wrap;
-  height: 70px;
+  height: 200px;
+  width:1000px;
+  flex-direction:row;
 }
 
 /* .container > div {
@@ -83,7 +103,7 @@
 
 .itemCafe {
   display: flex;
-  background-color: white;
+  background-color:white;
   margin: 10px;
   padding: 20px;
   font-size: 17px;
@@ -95,8 +115,8 @@
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 100%;
-  border: 3px solid blue;
+  height: 80px;
+  border: 3px solid lightskyblue;
 }
 
 .itemRest {
@@ -106,15 +126,15 @@
   padding: 20px;
   font-size: 17px;
   font-weight: bolder;
-  width: 10%;
+  width: 14%;
   justify-content: center;
   flex-wrap: wrap;
   background-image: url("./images/restaurant.jpeg");
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 100%;
-  border: 3px solid blue;
+  height: 80px;
+  border: 3px solid lightskyblue;
 }
 
 .itemBar {
@@ -131,8 +151,8 @@
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 100%;
-  border: 3px solid blue;
+  height:80px;
+  border: 3px solid lightskyblue;
 }
 
 .itemStore {
@@ -149,8 +169,8 @@
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 100%;
-  border: 3px solid blue;
+  height: 80px;
+  border: 3px solid lightskyblue;
 }
 
 @media (max-width: 800px) {
@@ -223,6 +243,8 @@
 .resultList {
   display: flex;
   justify-content: space-between;
+  font-family: 'Allerta Stencil', sans-serif;
+  
 }
 
 .button {

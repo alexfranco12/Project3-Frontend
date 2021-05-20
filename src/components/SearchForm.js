@@ -61,7 +61,21 @@ function SearchForm() {
   
     
     <div className="mainpage">
-       
+       {/* <video autoPlay loop muted
+       style ={{
+         position:"absolute",
+         width: "100%",
+         left:"1%",
+         top:"10%",
+         height:"100%",
+         objectFit:"cover",
+         transForm: "translate (-50%, -50%)",
+         zIndex:"-1"
+       }}
+      >
+         <source src= {LA1} type ="video/mp4"/>
+       </video>
+       */}
       <section className="searchBar">
         <input
           placeholder="search"
@@ -76,27 +90,27 @@ function SearchForm() {
         </div>
 
         <Link to={`/places/${searchString}`}>
-          <button className="button">Search</button>
+          <button type="button" class="btn btn-success" className="button">Search</button>
         </Link>
       </section>
 
       <div className="container">
-        <div className="container itemCafe">
+        <div className="itemCafe">
           <Link style={{ textDecoration: "none" }} to={`/places/cafes`}>
             Cafe
           </Link>
         </div>
-        <div className="container itemRest">
+        <div className=" itemRest">
           <Link style={{ textDecoration: "none" }} to={`/places/restaurants`}>
             Restaurant
           </Link>
         </div>
-        <div className="container itemBar">
+        <div className=" itemBar">
           <Link style={{ textDecoration: "none" }} to={`/places/bars`}>
             Bars
           </Link>
         </div>
-        <div className="container itemStore">
+        <div className=" itemStore">
           <Link style={{ textDecoration: "none" }} to={`/places/stores`}>
             Store
           </Link>
