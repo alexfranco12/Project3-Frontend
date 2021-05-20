@@ -1,0 +1,20 @@
+### TO-DO ITEMS ###
+[ ] change fav icon
+[ ] change document name
+[ ] add more places to the database
+
+# Search Details 
+[ ] fix the map size
+[ ] when zooming in & out, the ping shifts location on the map
+[ ] add more images to each place
+
+# reviews 
+[ ] name
+[x] reviews
+[ ] date
+
+# users 
+[ ] create a user collection
+[ ] create a user model
+[ ] user profile page/route
+

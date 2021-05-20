@@ -22,12 +22,17 @@ function ReviewForm( {place} ) {
 
     function getDetails() {
         setReview("");
+        setName("")
         axios.get(`http://${host}/api/places/${place}`).then((response) => {
             setLocReviews(response.data[0].reviews)
         });
-      }
+    }
 
-    function handleChange(e) {
+    function handleNameChange(e) {
+        setName(e.target.value);
+    }
+
+    function handleCommentChange(e) {
         setReview(e.target.value);
     }
     
@@ -49,12 +54,24 @@ function ReviewForm( {place} ) {
         <div className="reviews">
             <h4>Create a New Comment!</h4>
             <div className="review-form">
-                <input 
-                    className="review-textbox" 
-                    type="text"
-                    onChange={handleChange}
-                    value={review}
-                />
+                <div className="name-container">
+                    <label>Name: </label>
+                    <input 
+                        className="textbox" 
+                        type="text"
+                        onChange={handleNameChange}
+                        value={name}
+                    />
+                </div>
+                <div className="review-container">
+                    <label>Comment: </label>
+                    <input 
+                        className="textbox" 
+                        type="text"
+                        onChange={handleCommentChange}
+                        value={review}
+                    />
+                </div>
                 <button 
                     className="submit" 
                     onClick={handleSubmit}
