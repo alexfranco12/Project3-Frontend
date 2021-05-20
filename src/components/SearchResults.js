@@ -13,7 +13,7 @@ function SearchResults(props) {
   const host = process.env.REACT_APP_HEROKU_BACKEND
   
   function getResults() {
-    const url = `http://${host}/api/places/${spot}`;
+    const url = `${host}/api/places/${spot}`;
 
     axios.get(url).then((response) => {
       setResults(response.data);
