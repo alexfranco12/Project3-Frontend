@@ -33,7 +33,7 @@ function SearchForm() {
   };
 
   function getResults() {
-    const url = `http://${host}/api/places`;
+    const url = `${host}/api/places`;
 
     setBlankString("search");
 
