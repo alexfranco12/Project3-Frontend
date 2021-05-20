@@ -10,10 +10,7 @@ function SearchResults(props) {
   let spot = props.match.params.spot;
   const [results, setResults] = useState([]);
 
-  const host =
-  process.env.NODE_ENV === "production"
-    ? "blooming-eyrie-52127.herokuapp.com"
-    : "localhost:4000";
+  const host = process.env.REACT_APP_HEROKU_BACKEND
   
   function getResults() {
     const url = `http://${host}/api/places/${spot}`;
