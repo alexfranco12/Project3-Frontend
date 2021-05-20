@@ -38,7 +38,15 @@ Purlieu is a local search and discovery app that provides recommendations of pla
 
 ### Wireframes
 
+###### Home Page:
+
 ![](Home_Page.png)
+
+###### Search Page:
+![](Search_Page.png)
+
+###### Details Page:
+![](Detail_Page.png)
 
 
 
