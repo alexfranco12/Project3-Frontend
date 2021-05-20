@@ -4,7 +4,7 @@ import { Route, Link } from "react-router-dom";
 function Header(props) {
   return (
     <header className="main-header">
-      <h1 style={{ fontFamily: "Impact" }}>Travel App</h1>
+      <h1 >Purlieu </h1>
 
       <nav>
         {/* <Nav /> */}
