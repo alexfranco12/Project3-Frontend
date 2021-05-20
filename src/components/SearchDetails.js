@@ -13,9 +13,14 @@ function SearchDetails(props) {
   let history = useHistory();
 
   const [locDetails, setLocDetails] = useState([]);
+
+  const host =
+  process.env.NODE_ENV === "production"
+    ? "blooming-eyrie-52127.herokuapp.com"
+    : "localhost:4000";
   
   function getDetails() {
-    const url = `http://localhost:4000/api/places/${details}`;
+    const url = `http://${host}/api/places/${details}`;
 
     axios.get(url).then((response) => {
       setLocDetails(response.data);
@@ -27,7 +32,7 @@ function SearchDetails(props) {
   }, []);
 
   return (
-    <div>
+    <div className="recon">
       <button className="backButton back" onClick={() => history.goBack()}>
         Back
       </button>
@@ -38,9 +43,9 @@ function SearchDetails(props) {
             {" "}
             <img src={locDetails.icon} />
           </p>
-          <p id="name">  {locDetails.name}</p>
+          <h1 id="name">  {locDetails.name}</h1>
           <h3 id="name">Come visit us </h3>
-          <p>Address: {locDetails.formatted_address}</p>
+          <h2 className="address">Address: {locDetails.formatted_address}</h2>
 
           <div className="listing">
             <img

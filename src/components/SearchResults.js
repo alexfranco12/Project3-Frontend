@@ -8,12 +8,15 @@ import locationIcon from "@iconify/icons-mdi/map-marker";
 
 function SearchResults(props) {
   let spot = props.match.params.spot;
-
-  console.log(spot);
   const [results, setResults] = useState([]);
+
+  const host =
+  process.env.NODE_ENV === "production"
+    ? "blooming-eyrie-52127.herokuapp.com"
+    : "localhost:4000";
   
   function getResults() {
-    const url = `http://localhost:4000/api/places/${spot}`;
+    const url = `http://${host}/api/places/${spot}`;
 
     axios.get(url).then((response) => {
       setResults(response.data);

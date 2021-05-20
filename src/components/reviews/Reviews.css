@@ -1,19 +1,33 @@
 .reviews {
-    max-width: 800px;
+ 
 }
 
 .review-form {
     display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
 }
 
-.review-textbox {
+.name-container, .review-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.textbox {
     width: auto;
+}
+
+.submit {
+    margin-top: 10px;
+    align-self: flex-end;
 }
 
 .review-card {
     border: solid 1px;
+    border-radius: .5em;
     padding: 10px;
+    margin: 0 70px 10px 10px;
 }
 
 .review-name {
