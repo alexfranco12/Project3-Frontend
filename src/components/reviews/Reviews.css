@@ -13,7 +13,9 @@
 
 .review-card {
     border: solid 1px;
+    border-radius: .5em;
     padding: 10px;
+    margin: 10px;
 }
 
 .review-name {
