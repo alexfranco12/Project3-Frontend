@@ -5,13 +5,17 @@ Purlieu is a local search and discovery app that provides recommendations of pla
 ### Technologies used
 
 * Javascript
-* REACT
-* REACT Routers
+* React
+  - React Routers
+  - React Select
+  - React Bootstrap
 * Third party API's:
   - Google Maps
   - Google Places
-* REACT Bootstrap
 * Flexbox
 * Heroku
-* 
+* Express
+* MongoDB
+* Mongoose
+
 
