@@ -13,14 +13,10 @@ function SearchDetails(props) {
   let history = useHistory();
 
   const [locDetails, setLocDetails] = useState([]);
-
-  const host =
-  process.env.NODE_ENV === "production"
-    ? "blooming-eyrie-52127.herokuapp.com"
-    : "localhost:4000";
+  const host = process.env.REACT_APP_HEROKU_BACKEND
   
   function getDetails() {
-    const url = `http://${host}/api/places/${details}`;
+    const url = `${host}/api/places/${details}`;
 
     axios.get(url).then((response) => {
       setLocDetails(response.data);
@@ -41,7 +37,7 @@ function SearchDetails(props) {
         <div key={locDetails.id}>
           <p>
             {" "}
-            <img src={locDetails.icon} />
+            <img alt="" src={locDetails.icon} />
           </p>
           <h1 id="name">  {locDetails.name}</h1>
           <h3 id="name">Come visit us </h3>
