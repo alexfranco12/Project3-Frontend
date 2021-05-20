@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
 .map-h2 {
   display: flex;
   align-content: right;
@@ -65,6 +68,14 @@
   }
   #name{
     text-align: center;
+    font-family: 'Monofett', cursive;
+  }
+  .recon{
+    background-color:#f3f3f3 ;
   }
   
+}
+.address{
+  font-size: 16px;
+
 }
