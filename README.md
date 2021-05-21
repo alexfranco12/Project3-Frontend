@@ -2,6 +2,15 @@
 
 Purlieu is a local search and discovery app that provides recommendations of places to go nearby. 
 
+###### Home Screen
+![](/images/homescreen.png)
+
+###### Search Results Screen
+![](/images/results_screen.png)
+
+###### Details Screen
+![](/images/details_screen.png)
+
 ### Technologies used
 
 * Javascript
