@@ -49,13 +49,13 @@ Purlieu is a local search and discovery app that provides recommendations of pla
 
 ###### Home Page:
 
-![](Home_Page.png)
+![](/images/Home_Page.png)
 
 ###### Search Page:
-![](Search_Page.png)
+![](/images/Search_Page.png)
 
 ###### Details Page:
-![](Detail_Page.png)
+![](/images/Detail_Page.png)
 
 
 
